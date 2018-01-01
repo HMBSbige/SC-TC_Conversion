@@ -40,6 +40,7 @@
             // 
             this.SC_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SC_TextBox.Location = new System.Drawing.Point(3, 17);
+            this.SC_TextBox.MaxLength = 0;
             this.SC_TextBox.Multiline = true;
             this.SC_TextBox.Name = "SC_TextBox";
             this.SC_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -73,6 +74,7 @@
             // 
             this.TC_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TC_TextBox.Location = new System.Drawing.Point(3, 17);
+            this.TC_TextBox.MaxLength = 0;
             this.TC_TextBox.Multiline = true;
             this.TC_TextBox.Name = "TC_TextBox";
             this.TC_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
