@@ -20,6 +20,7 @@ namespace SC_TC_Conversion
 
         public static string ToTraditional(string source)
         {
+            source = source.Replace(@"郁", @"鬱");
             var target = new string(' ', source.Length);
             int ret = LCMapString(LOCALE_SYSTEM_DEFAULT, LCMAP_TRADITIONAL_CHINESE, source, source.Length, target, source.Length);
             return target;

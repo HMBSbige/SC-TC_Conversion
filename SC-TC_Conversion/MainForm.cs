@@ -15,11 +15,11 @@ namespace SC_TC_Conversion
         {
             Icon = Resources.SC_TC;
             ChangeSize();
-            const string testString = @"abc123书樂う반~√";
+            const string testString = @"abc123书樂鬱う반~√™";
             try
             {
                 SC_TextBox.Text = ChineseStringUtility.ToSimplified(testString);
-                TC_TextBox.Text = ChineseStringUtility.ToTraditional(testString);
+                TC_TextBox.Text = ChineseStringUtility.ToTraditional(SC_TextBox.Text);
             }
             catch
             {
