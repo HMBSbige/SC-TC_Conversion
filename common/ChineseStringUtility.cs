@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SC_TC_Conversion
+namespace SC_TC_Conversion_Common
 {
     public static class ChineseStringUtility
     {
@@ -9,7 +9,7 @@ namespace SC_TC_Conversion
         private const int LCMAP_TRADITIONAL_CHINESE = 0x04000000;
 
         [DllImport(@"kernel32", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern int LCMapString(int Locale, int dwMapFlags, string lpSrcStr, int cchSrc, [Out] string lpDestStr, int cchDest);
+        private static extern int LCMapString(int locale, int dwMapFlags, string lpSrcStr, int cchSrc, [Out] string lpDestStr, int cchDest);
 
         public static string ToSimplified(string source)
         {

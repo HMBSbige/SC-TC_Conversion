@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC-TC_Conversion", "SC-TC_Conversion\SC-TC_Conversion.csproj", "{13E0B87E-4652-4152-A5A4-B020A751B139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC-TC_Conversion_File", "SC-TC_Conversion_File\SC-TC_Conversion_File.csproj", "{CE265F91-03B5-4273-981F-8BBBE401B72F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{13E0B87E-4652-4152-A5A4-B020A751B139}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E0B87E-4652-4152-A5A4-B020A751B139}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E0B87E-4652-4152-A5A4-B020A751B139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE265F91-03B5-4273-981F-8BBBE401B72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE265F91-03B5-4273-981F-8BBBE401B72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE265F91-03B5-4273-981F-8BBBE401B72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE265F91-03B5-4273-981F-8BBBE401B72F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
