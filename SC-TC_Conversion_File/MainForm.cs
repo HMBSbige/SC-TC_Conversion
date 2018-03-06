@@ -22,7 +22,10 @@ namespace SC_TC_Conversion_File
                 Filter = @"所有文件|*.*"
             };
             dia.ShowDialog();
-            textBox1.Text = dia.FileName;
+            if (dia.FileName != string.Empty)
+            {
+                textBox1.Text = dia.FileName;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,7 +37,10 @@ namespace SC_TC_Conversion_File
                 Filter = @"所有文件|*.*"
             };
             dia.ShowDialog();
-            textBox2.Text = dia.FileName;
+            if (dia.FileName != string.Empty)
+            {
+                textBox2.Text = dia.FileName;
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -58,6 +64,18 @@ namespace SC_TC_Conversion_File
                 var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
                 var extension = Path.GetExtension(fileName);
                 textBox2.Text = directoryName + @"\" + fileNameWithoutExtension + @"_tc" + extension;
+            }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            var fileName = textBox1.Text;
+            if (radioButton3.Checked && File.Exists(fileName))
+            {
+                var directoryName = Path.GetDirectoryName(fileName);
+                var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
+                var extension = Path.GetExtension(fileName);
+                textBox2.Text = directoryName + @"\" + fileNameWithoutExtension + @"_new" + extension;
             }
         }
 
@@ -119,6 +137,10 @@ namespace SC_TC_Conversion_File
             else if (radioButton2.Checked)
             {
                 textBox2.Text = directoryName + @"\" + fileNameWithoutExtension + @"_tc" + extension;
+            }
+            else
+            {
+                textBox2.Text = directoryName + @"\" + fileNameWithoutExtension + @"_new" + extension;
             }
         }
 
