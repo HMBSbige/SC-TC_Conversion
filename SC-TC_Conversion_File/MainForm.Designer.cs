@@ -41,6 +41,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +80,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(570, 119);
+            this.groupBox1.Size = new System.Drawing.Size(570, 143);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "文件转换";
@@ -88,7 +89,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(486, 84);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 52);
             this.button3.TabIndex = 5;
             this.button3.Text = "转换";
             this.button3.UseVisualStyleBackColor = true;
@@ -96,6 +97,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.radioButton3);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -104,7 +106,7 @@
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Location = new System.Drawing.Point(6, 74);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(474, 37);
+            this.groupBox2.Size = new System.Drawing.Size(474, 62);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -119,7 +121,7 @@
             "ANSI",
             "UTF-16 BE",
             "UTF-16 LE"});
-            this.comboBox2.Location = new System.Drawing.Point(365, 12);
+            this.comboBox2.Location = new System.Drawing.Point(259, 33);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(93, 20);
             this.comboBox2.TabIndex = 5;
@@ -127,7 +129,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(282, 17);
+            this.label2.Location = new System.Drawing.Point(176, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 12);
             this.label2.TabIndex = 4;
@@ -136,7 +138,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 17);
+            this.label1.Location = new System.Drawing.Point(6, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 3;
@@ -153,7 +155,7 @@
             "ANSI",
             "UTF-16 BE",
             "UTF-16 LE"});
-            this.comboBox1.Location = new System.Drawing.Point(183, 12);
+            this.comboBox1.Location = new System.Drawing.Point(77, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(93, 20);
             this.comboBox1.TabIndex = 2;
@@ -161,7 +163,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(59, 15);
+            this.radioButton2.Location = new System.Drawing.Point(61, 15);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(47, 16);
             this.radioButton2.TabIndex = 1;
@@ -173,7 +175,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 15);
+            this.radioButton1.Location = new System.Drawing.Point(8, 15);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(47, 16);
             this.radioButton1.TabIndex = 0;
@@ -203,11 +205,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(114, 15);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(83, 16);
+            this.radioButton3.TabIndex = 6;
+            this.radioButton3.Text = "只转换编码";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 119);
+            this.ClientSize = new System.Drawing.Size(570, 143);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
@@ -236,6 +248,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
 

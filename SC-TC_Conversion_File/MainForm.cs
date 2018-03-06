@@ -126,6 +126,8 @@ namespace SC_TC_Conversion_File
         {
             var inputfileName = textBox1.Text;
             var outputfileName = textBox2.Text;
+            var encodingstr1 = comboBox1.Text;
+            var encodingstr2 = comboBox2.Text;
 
             if (!File.Exists(inputfileName))
             {
@@ -149,17 +151,21 @@ namespace SC_TC_Conversion_File
 
             try
             {
-                var origin = File.ReadAllText(inputfileName,TextEncoding.GetEncoding(comboBox1.Text));
+                var origin = File.ReadAllText(inputfileName,TextEncoding.GetEncoding(encodingstr1));
                 string output;
                 if (radioButton1.Checked)
                 {
                     output = ChineseStringUtility.ToSimplified(origin);
                 }
-                else
+                else if (radioButton2.Checked)
                 {
                     output = ChineseStringUtility.ToTraditional(origin);
                 }
-                File.WriteAllText(outputfileName,output,TextEncoding.GetEncoding(comboBox2.Text));
+                else
+                {
+                    output = origin;
+                }
+                File.WriteAllText(outputfileName,output,TextEncoding.GetEncoding(encodingstr2));
                 MessageBox.Show(@"转换成功！", @"成功！", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
